@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NordicMatch MVP</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header><div><strong>NordicMatch</strong><small>B2B SaaS MVP</small></div><span id="health">Checking...</span></header>
+<main>
+<section class="hero">
+<div><p class="eyebrow">SWEDEN-FIRST B2B SAAS</p><h1>Verified professionals. Explainable AI matching.</h1><p>Quick MVP for candidate matching, verification, subscriptions, contracts, auditability and GDPR-oriented workflows.</p></div>
+<div class="stats"><div><b>5</b><span>User roles</span></div><div><b>Hybrid</b><span>Matching</span></div><div><b>EU</b><span>Hosting-ready</span></div></div>
+</section>
+
+<section class="grid">
+<article>
+<p class="eyebrow">EMPLOYER PORTAL</p><h2>Explainable Candidate Matching</h2>
+<form id="matchForm">
+<label>Description<textarea id="desc">Need a verified welder with 4+ years of experience in Stockholm.</textarea></label>
+<div class="two"><label>Skills<input id="skills" value="welding"></label><label>Min years<input id="years" type="number" value="4"></label></div>
+<div class="two"><label>Location<input id="location" value="Stockholm"></label><label>Verification<select id="verification"><option value="any">Any</option><option value="document_checked">Document checked+</option><option value="independently_confirmed">Independently confirmed</option></select></label></div>
+<button>Run Match</button>
+</form><div id="matchResult" class="box muted">No match run yet.</div>
+</article>
+
+<article>
+<p class="eyebrow">VERIFICATION OFFICER</p><h2>Verification Queue</h2>
+<div id="verifyBox" class="box muted">Loading...</div>
+</article>
+</section>
+
+<section class="grid">
+<article>
+<p class="eyebrow">COMPANY ADMIN</p><h2>Subscription Controls</h2>
+<div id="companyBox" class="box muted">Loading...</div>
+<div class="buttons"><button data-plan="starter">Starter</button><button data-plan="growth">Growth</button><button data-plan="enterprise">Enterprise</button></div>
+</article>
+
+<article>
+<p class="eyebrow">E-SIGNATURE</p><h2>Contract Workflow</h2>
+<form id="contractForm"><label>Template<input id="template" value="Business Subscription Agreement"></label><button>Create Contract</button></form>
+<div id="contractBox" class="box muted">No contract action yet.</div>
+</article>
+</section>
+
+<section class="grid">
+<article><p class="eyebrow">AUDITABILITY</p><h2>Audit Log</h2><button id="auditBtn">Refresh</button><div id="auditBox" class="box muted">No entries yet.</div></article>
+<article><p class="eyebrow">PILOT COST</p><h2>100–500 Candidates</h2><button id="costBtn">Show Estimate</button><div id="costBox" class="box muted">Not loaded.</div></article>
+</section>
+
+<section class="arch"><b>Suggested production architecture</b><p>Next.js → NestJS → PostgreSQL + EU object storage → Hybrid matching → Stripe → Oneflow/Scrive → Audit + CI/CD</p></section>
+</main><script src="/app.js"></script>
+</body></html>
